@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Uso de una etiqueta meta para descripcion general del proposito de la pagina y para info a los navegadores-->
+     <meta name="author" content="PDguezPgr">
+     <meta name="description" content="Acceso la web de solicitud de empleo de una ficticia mutua medica">
+    <!-- Declaracion de hoja de estilos css-->
+     <link rel="stylesheet" type="text/css" href="MutuaStyles.css">
+    <!--Responsive web design-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=0, maximum-scale=1 ">
+    <title> Mutua SafeVita Trabaja con nosotros</title>
+</head>
+<body>
+    <header>
+        <div class="flex-header" id="inicio">
+            <img class="VistaGral" src="./assets/equipo.png"  width="15%" height="6%" alt="teleoperadora" title="Soporte reservas">
+            <h2 class="mensaje">"La vocación en el servicio a las personas, desarrollada en el mejor lugar para crecer"</h2>
+            <img class="logo" src="./assets/logo Mutua .png" width="7%" height="7%" alt="logo" title="Logo">
+        </div> 
+        <nav>
+            <ul>
+                <li><a href="indexMutua.html" title="Home" >Página Principal</a> </li>
+                <li><a href="#inicio" class="navegable" title="Trabajo">Trabaja con nosotros</a></li> 
+                <li><a href="#contacto" class="navegable" title="Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="submenus">
+            <div class="containerFlex">
+                <div class="box" id="inscripcion">
+                    <h3>Inscribete</h3>
+                    <img src="./assets/laptop.png" alt="laptop" width="25" height="25">
+                    <p> Ingresa tus datos personales y adjunta la documentación de interés para el puesto. Selecciona la oferta en la que
+                        quieres desarrollar tu talento. </p>
+                </div>
+                <div class="box" id="contactar">
+                    <h3>Contacto</h3> 
+                    <img src="./assets/two.png" alt="laptop" width="40" height="40">
+                    <p>En el momento que se genera una vacante, pasaras a ser valorado por nuestro equipo de RRHH y especialistas del
+                       área solicitada. </p>      
+                </div>
+                <div class="box" id="incorporacion">
+                    <h3>Incorporación</h3>
+                    <img src="./assets/agreement.png" alt="laptop" width="40" height="40">
+                    <p>Una vez el proceso se cierra, si eres la persona designada, formarás parte del equipo Mutua SafeVita. Llega un mundo de oportunidades. <strong>Bienvenid@!!</strong></p>
+                </div>
+            </div>
+            <picture class="casa">
+                <a href="#inicio"> <img src="./assets/apartment.png" alt="Whatsapp" width="25em" height="25em"></a> 
+            </picture>
+        </section>
+        <!--Formulario de reserva-->
+        <div>
+            <form method="post">
+                <fieldset>
+                    <legend> Datos personales</legend>
+                        <p><label for="nombre">Nombre: </label>
+                            <input type="text" id="nombre" name="datos_personales" placeholder="Ana Maria">
+                            <label for="apellido"> Apellidos: </label>
+                            <input type="text" id="apellido" name="datos_personales" placeholder="Fernandez Martinez"></p>
+                        <p><label for="poblacion">Población: </label>
+                            <input type="text" id="poblacion" name="datos_personales" placeholder="San Lorenzo del Pinatar"></p>
+                        <p><label for="telefono">Teléfono: </label>
+                            <input type="tel" id="telefono" name="datos_personales" placeholder="654 321 098"></p>
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="datos_personales" placeholder="Ana.Fernandez@gmail.com"><br>
+                        <br>
+                        <p>Seleccione posición de interés <small>(seleccion multiple: + CRTL)</small></p>
+                            <select name="especialidades" size="5" multiple>
+                            <optgroup label="Área Sanitaria">
+                                <option value="drmedicinageneral">Médico Medicina General</option>
+                                <option value="medicoespecialista">Médico Especialista</option>
+                                <option value="enfermero">Enfermero/a</option>
+                                <option value="radiodiagnostico">Técnico/a en radiodiagnóstico</option>
+                                <option value="auxenfermeria">Auxiliar de Enfermería</option>
+                                <option value="psicologo">Psicólogo/a</option>
+                                <option value="farmaceutico">Farmaceutico/a</option>
+                            </optgroup>
+                            <optgroup label="Área Administrativa y de Gestión">
+                                <option value="recepcionista">Recepcionista</option>
+                                <option value="gestor">Gestor/a de Expedientes médicos</option>
+                                <option value="administrativo">Administrativo/a</option>
+                                <option value="rrhh">Gestor/a de Recursos Humanos</option>
+                                <option value="marketing">Técnico/a de Comunicación y Marketing</option>               
+                            </optgroup>
+                            <optgroup label="Área Técnológica">
+                                <option value="informatica">Técnico/a en Informática y Sistemas</option>
+                                <option value="analista">Analista de Datos</option>
+                            </optgroup>          
+                            </select>
+                        <p><label for="curriculum">Adjuntar Curriculum Vitae:  </label>
+                            <input type="file" name="curriculum" id="curriculum" accept=".pdf, .jpg,.jpeg, .doc, .docx" required></p>
+                        <p><label>Enlace a perfil de Instagram  <input type="url"></label></p>    
+                        <p><label for="hora">¿A partir de que hora o franja horaria, podemos contactarte?</label><br><br>
+                            <input type="time" name="hora">
+                            <input type="checkbox" id="mañana" value="horario"> Mañanas
+                            <input type="checkbox" id="tarde" value="horario"> Tardes</p>
+                        <p><label for="mensaje">Otra información relevante: </label></p>
+                            <textarea id="mensaje" name="datos" placeholder="Indicaciones" rows="3" cols="30">
+                            </textarea><br>
+                         <p><small><strong>Antes de enviar, es necesario aprobar la<a href="#privacidad">  política de privacidad </a>adjunta</strong></small></p>
+                        <input type="submit" class="enviar" value="Enviar">
+                </fieldset>
+                <fieldset class="politica">
+                    <legend id="privacidad"> Politica de privacidad</legend>
+                        <h4>POLITICA DE PRIVACIDAD Y AVISO LEGAL - MUTUA SAFEVITA</h4>
+                        <ol>
+                            <li>Introducción</li>
+                                <p>Bienvenido/a a Mutua SafeVITA. Nos comprometemos a proteger su privacidad y a garantizar la seguridad de sus datos personales. Esta Política de Privacidad explica cómo recopliamos, utilizamos y protegemos la información de nuestros usuarios.</p>
+                            <li>Responsable del tratamiento de Datos
+                                <p>De conformidad con la normativa vigente en protección de datos, Mutua SafeVita (en adelante, "la Mutua") con domicilio en Paseo de la Salud, 15, 01234 Santaquate, es la responsable del tratamiento de los datos personales que usted nos facilite. </p>
+                            </li>
+                            <li>Datos que Recopilamos</li>
+                                <ul><small>
+                                    <p>Los datos personales que podemos recopilar incluyen:</p>
+                                    <li>Nombre y Apellidos</li>
+                                    <li>DNI o documento identificativo</li>
+                                    <li>Datos de contacto (correo electrónico, teléfono, dirección postal)</li>
+                                    <li>Historial médico y datos relacionados con su salud (cuando sea necesario)</li>
+                                    <li>Datos bancarios para la gestión de pagos y reembolsos</li>
+                                    </small>
+                                </ul><br>
+                            </li>
+                            <li>Finalidad del Tratamiento
+                                <ul><small>
+                                    <p>Los datos personales recopilados serán utilizados para:</p>
+                                    <li>Gestionar su afiliación y prestaciones sanitarias</li>
+                                    <li>Proporcionar asistencia sanitaria y servicios relacionados.</li>
+                                    <li>Contactarle para informale sobre novedades o cambios en nuestros servicios</li>
+                                    <li>Cumplir con obligaciones legales y normativas vigentes</li>
+                                    </small>
+                                </ul><br>
+                            </li>
+                            <li>Base Legal del Tratamiento
+                                <ul><small>
+                                    <p>Tratamos sus datos personales con base en:</p>
+                                    <li>La necesidad de ejecutar un contrato con usted.</li>
+                                    <li>Su consentimiento expreso para determinadas actividades.</li>
+                                    <li>Cumplimiento de obligaciones legales y normativas sanitarias</li>
+                                    </small>
+                                </ul>
+                            </li><br>
+                            <li>Seguridad y Confidencialidad
+                                <p>Mutua SafeVita adopta medidas de seguridad técnicas y organizativas adecuadas para proteger sus datos
+                                   personales contra el acceso no autorizado, pérdida, alteración o divulgación.</p>
+                            </li>
+                            <li>Derechos del usuario
+                            <ul>
+                                <small>
+                                <p>Usted tiene derecho a:</p>
+                                <li>Acceder, rectificar o suprimir sus datos personales.</li>
+                                <li>Limitar u oponerse a su tratamiento.</li>
+                                <li>Solicitar la portabilidad de sus datos</li>
+                                <li>Retirar su consentimiento en cualquier momento</li>
+                                <p>Para ejercer estos derechos, puede contactar con nosotros en <a href="mailto:Safevita.info@mutuasafevita.es">
+                                   Safevita.info@mutuasafevita.es</a> </p>
+                                </small>
+                            </ul>
+                            <br>
+                            </li>
+                            <li>Uso de Cookies
+                                <p>Nuestra página web utiliza cookies para mejorar la experiencia del usuario. Para más información, consulte nuestra Política de Cookies.</p></li>
+                            <li>Cambios en la Política de privacidad
+                                <p>Mutua SafeVita se reserva el derecho a modificar esta Política de Privacidad en cualquier momento. 
+                                   Le notificaremos cualquier cambio relevante mediante nuestro sitio web.</p></li>
+                            <li>Aceptación de la Política
+                                <p>Al hacer click en la casilla correspondiente, usted declara haber leído y aceptado esta Política en su
+                                   totalidad.</p></li>
+                        </ol>
+                        <input type="checkbox" id="confidencialidad" value="confidencialidad" required><strong>He leido y acepto la politica de privacidad</strong><br>
+                </fieldset>
+            </form>
+    <div class="boxGrid">
+        <picture class="casa">
+            <a href="#inicio"> <img src="./assets/apartment.png" alt="Whatsapp" width="25em" height="25em"></a> 
+        </picture>
+    </div>
+        
+    </main>
+    <footer class="containerGrid">
+        <div class="boxGrid">
+            <img class="logo" src="./assets/logo Mutua .png" text="Mutua SafeVita" width="75em" height="75em">
+            <h3>Mutua SafeVita</h3>
+                <p>Paseo de la Salud, 15 </p>
+                <p>Santaquate, 01234 ES</p>
+        </div>
+        <div class="boxGrid">
+            <h3 id="horarios">Horarios</h3>
+            <h4>Atención médica programada:</h4>
+                <p>Lunes a viernes de 07:00h a 20:00h</p>
+                <img src="./assets/whatsapp.png" alt="Whatsapp" width="25" height="25"> 654 321 0987 <br>
+                <img src="./assets/telephone.png" alt="telephone" width="25" height="25"><a href="tel:654 321 0987"> 654 321 0987</a> 
+            <h4>Urgencias:</h4>
+                <p>Servicio 24h <img src="./assets/telephone.png" alt="telephone" width="25" height="25"><a href="tel:902 123 456 789"> 902 123 456 789</a></p>
+        </div>
+        <div class="boxGrid">
+            <h3 id="contacto">Contacto</h3>
+                <p> 
+                <img src="./assets/arrow.png" alt="email" width="25" height="25">
+                <a href="mailto:Safevita.info@mutuasafevita.es"> Safevita.info@mutuasafevita.es</a>
+                </p>
+                <p> 
+                    <img src="./assets/telephone.png" alt="Whatsapp" width="25" height="25"><a href="tel:+34 93 123456789"> +34 93 123456789</a>
+                </p>
+                <h3>Síguenos</h3>
+                    <a href="https:www.youtube.com" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="25" height="25"></a>
+                    <a href="https:www.instagram.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="25" height="25"></a>
+                    <a href=" https://twitter.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="25" height="25"></a>
+                    <a href="https://www.facebook.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" width="25" height="25"></a>          
+                    <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Facebook" width="25" height="25"></a>
+        </div>
+        <div class="boxGrid">
+        </div>
+        <div class="boxGrid">
+            <summary>
+                <ul><strong><span>&#x25BE</span>Referencias y atribuciones</strong></summary>        
+                <li><small><a href="https://www.flaticon.com/free-icons/whatsapp" title="whatsapp icons">Whatsapp icons created by Fathema Khanom - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Pixel perfect - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/to" title="to icons">To icons created by iconsmind - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/casa" title="casa icons">Casa icons created by hqrloveq - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/youtube_1384060">Icona de YouTube creada per Freepik - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/instagram_2111463">Icona d'Instagram creada per Pixel perfect - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/twitter_733579">Icona de Twitter creada per Pixel perfect - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/facebook_5968764">Icona de Facebook creada per Freepik - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/linkedin_174857">Icona de LinkedIn creada per Freepik - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by Freepik - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/conversation" title="conversation icons">Conversation icons created by Roundicons Premium - Flaticon</a></small>
+                <li><small><a href="https://www.flaticon.com/free-icons/agreeement" title="agreeement icons">Agreeement icons created by syafii5758 - Flaticon</a></small>
+            </ul>
+            </summary>
+        </div>
+        <div class="boxGrid">
+            <picture class="casa">
+                <a href="#inicio"> <img src="./assets/apartment.png" alt="Whatsapp" width="25em" height="25em"></a> 
+            </picture></div>
+        <!--<div class="boxGrid"></div>
+        <div class="boxGrid"></div>
+        <div class="boxGrid"></div>-->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Uso de una etiqueta meta para descripcion general del proposito de la pagina y para info a los navegadores-->
+     <meta name="author" content="PDguezPgr">
+     <meta name="description" content="Acceso la web de reserva de horas de una ficticia mutua medica">
+    <!-- Declaracion de hoja de estilos css-->
+     <link rel="stylesheet" type="text/css" href="MutuaStyles.css">
+    <!--Responsive web design-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=0, maximum-scale=1 ">
+   <title> Mutua SafeVita Reserva Online</title>
+</head>
+<body>
+    <header>
+        <div class="flex-header" id="inicio">
+            <img class="VistaGral" src="./assets/teleoperadora.png"  width="15%" height="6%" alt="teleoperadora" title="Soporte reservas">
+            <img class="logo" src="./assets/logo Mutua .png" width="7%" height="7%" alt="logo" title="Logo">
+        </div>     
+        <nav>
+            <ul>
+                <li><a href="indexMutua.html" title="Home" >Página Principal</a> </li>
+                <li><a href="reservaOnline.html" class="navegable" title="Cita">Reserva Online</a></li>
+                <li><a href="#contacto" class="navegable" title="Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Formulario de reserva-->
+        <div>
+            <form method="post">
+                <fieldset>
+                    <legend> Datos personales</legend>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" name="datos_personales" placeholder="Ana Maria">
+                        <label for="apellido">Apellido: </label>
+                        <input type="text" id="apellido" name="datos_personales" placeholder="Fernandez Martinez">
+                        <label for="telefono">Teléfono: </label>
+                        <input type="tel" id="telefono" name="datos_personales" placeholder="654 321 098">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="datos_personales" placeholder="Ana.Fernandez@gmail.com"><br>
+                </fieldset>
+                <fieldset>
+                    <legend> Datos de registro </legend>
+                        <label for="tarjeta">Nº tarjeta: </label>
+                        <input type="text" id="tarjeta" name="datos_personales" placeholder="123456789S"><br>            
+                        <label for="password">Password: </label>
+                        <input type="password" id="password" name="datos_personales" placeholder="******"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Solicitud de la reserva</legend>
+                        <p><label for="usuario">Indique beneficiario de la reserva</label></p>
+                        <input type="radio" id="solicitante" name="usuario">Solicitante
+                        <input type="radio" id="menor" name="usuario">Menor a cargo
+                        <br>
+                        <p>Seleccione Especialidad y Doctor</p>
+                        <select name="especialidades" size="5">
+                            <optgroup label="Alergologia">
+                                <option value="garcia">Dr. Garcia</option>
+                                <option value="rodriguez">Dra. Rodriguez</option>
+                            </optgroup>
+                            <optgroup label="Cardiologia">
+                                <option value="fernandez">Dra. Fernandez</option>
+                                <option value="gonzalez">Dr. Gonzalez</option>
+                            </optgroup>
+                            <optgroup label="Clinica del Dolor">
+                                <option value="lopez">Dr. Lopez</option>
+                                <option value="martinez">Dra. Martinez</option>
+                                <option value="falco">Dra. Falco</option>
+                            </optgroup>
+                            <optgroup label="Cirugia">
+                                <option value="house">Dr. House</option>
+                                <option value="delarosa">Dra. De la Rosa</option>
+                            </optgroup>
+                            <optgroup label="Vascular y Angiologia">
+                                <option value="dominguez">Dra. Dominguez</option>
+                                <option value="benavides">Dr. Benavides</option>
+                            </optgroup>
+                            <optgroup label="Dermatologia">
+                                <option value="castro">Dr. Castro</option>
+                                <option value="contreras">Dra. Contreras</option>
+                                <option value="cervantes">Dra. Cervantes</option>
+                            </optgroup>
+                            <optgroup label="Digestivo">
+                                <option value="jauregui">Dra. Jauregui</option>
+                                <option value="haro">Dra. Haro</option>
+                            </optgroup>
+                            <optgroup label="Endocrinologia">
+                                <option value="baker">Dr. Baker</option>
+                                <option value="otero">Dra. Otero</option>
+                            </optgroup>
+                            <optgroup label="Ginecologia">
+                                <option value="martin">Dra. Martin</option>
+                                <option value="varela">Dr. Varela</option>
+                                <option value="blanco">Dra. Blanco</option>
+                            </optgroup>
+                            <optgroup label="Medicina General">
+                                <option value="sevilla">Dr. Sevilla</option>
+                                <option value="alcantara">Dra. Alcantara</option>
+                                <option value="medina">Dr. Medina</option>
+                            </optgroup>
+                            <optgroup label="Medicina Estetica">
+                                <option value="etayo">Dr. Etayo</option>
+                                <option value="herraez">Dra. Herraez</option>
+                            </optgroup>
+                            <optgroup label="Neumologia">
+                                <option value="alaue">Dr. Alaue</option>
+                                <option value="herraez">Dra. Herraez</option>
+                            </optgroup>
+                            <optgroup label="Neurologia">
+                                <option value="perez">Dr. Perez</option>
+                                <option value="reverte">Dra. Reverte</option>
+                            </optgroup>
+                            <optgroup label="Oftalmologia">
+                                <option value="barraquer">Dr. Barraquer</option>
+                                <option value="almeida">Dra. Almeida</option>
+                            </optgroup>
+                            <optgroup label="Otorrinolaringologia">
+                                <option value="pegaso">Dra. Pegaso</option>
+                                <option value="sintra">Dr. Sanchez-Sintra</option>
+                            </optgroup>
+                            <optgroup label="Pediatria">
+                                <option value="perez">Dr. Perez</option>
+                                <option value="iñiguez">Dra. Iñiguez</option>
+                            </optgroup>
+                            <optgroup label="Podologia">
+                                <option value="berganza">Dra. Berganza</option>
+                                <option value="simon">Dr. Simón</option>
+                            </optgroup>
+                            <optgroup label="Psicologia">
+                                <option value="sosa">Dra. Sosa</option>
+                                <option value="freud">Dr. Freud</option>
+                                <option value="robledo">Dra. Robledo</option>
+                            </optgroup>
+                            <optgroup label="Reumatologia">
+                                <option value="haddad">Dr. Haddad</option>
+                                <option value="rojoz">Dra. Rojo</option>
+                            </optgroup>
+                            <optgroup label="Traumatologia">
+                                <option value="ahued">Dra. Ahued</option>
+                                <option value="urrutia">Dr. Urruia</option>
+                                <option value="exposito">Dr. Exposito</option>
+                            </optgroup>
+                            <optgroup label="Urologia">
+                                <option value="abatino">Dr. Abatino</option>
+                                <option value="escudero">Dr. Escudero</option>
+                            </optgroup>
+                            <optgroup label="Cardiología">
+                                <option value="romero">Dr. Romero</option>
+                                <option value="alonso">Dra. Alonso</option>
+                            </optgroup>     
+                        </select>
+                    <p><label for="dia">Indique a partir de que fecha tiene disponibilidad y la franja horaria</label></p>
+                        <input type="date" name="dia" required>
+                        <input type="checkbox" id="mañana" value="horario"> Mañanas
+                        <input type="checkbox" id="tarde" value="horario"> Tardes
+                        <br>
+                        <br>
+                    <p><label for="mensaje">Otra información relevante: </label></p>
+                        <textarea id="mensaje" name="datos" placeholder="Indicaciones">
+                        </textarea>
+                        <br>
+                    <input type="checkbox" id="confidencialidad" value="confidencialidad" required><small><a href="solicitudTrabajo.html#privacidad"> He leido y acepto la politica de privacidad</small><br></a>
+                </fieldset>
+        </div>
+            <input type="submit" class="enviar2" value="Enviar">
+                <picture class="casa">
+                    <a href="#inicio"> <img src="./assets/apartment.png" alt="Whatsapp" width="25em" height="25em"></a> 
+                </picture>
+            </form>
+    </main>
+    <footer class="containerGrid">
+        <div class="boxGrid">
+            <img class="logo" src="./assets/logo Mutua .png" text="Mutua SafeVita" width="75em" height="75em">
+            <h3>Mutua SafeVita</h3>
+                <p>Paseo de la Salud, 15 </p>
+                <p>Santaquate, 01234 ES</p>
+        </div>
+        <div class="boxGrid">
+            <h3 id="horarios">Horarios</h3>
+            <h4>Atención médica programada:</h4>
+                <p>Lunes a viernes de 07:00h a 20:00h</p>
+                <img src="./assets/whatsapp.png" alt="Whatsapp" width="25" height="25"> 654 321 0987 <br>
+                <img src="./assets/telephone.png" alt="telephone" width="25" height="25"><a href="tel:654 321 0987"> 654 321 0987</a> 
+            <h4>Urgencias:</h4>
+                <p>Servicio 24h <img src="./assets/telephone.png" alt="telephone" width="25" height="25"><a href="tel:902 123 456 789"> 902 123 456 789</a></p>
+        </div>
+        <div class="boxGrid">
+            <h3 id="contacto">Contacto</h3>
+                <p> 
+                <img src="./assets/arrow.png" alt="email" width="25" height="25">
+                <a href="mailto:Safevita.info@mutuasafevita.es"> Safevita.info@mutuasafevita.es</a>
+                </p>
+                <p> 
+                    <img src="./assets/telephone.png" alt="Whatsapp" width="25" height="25"><a href="tel:+34 93 123456789"> +34 93 123456789</a>
+                </p>
+                <h3>Síguenos</h3>
+                    <a href="https:www.youtube.com" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="25" height="25"></a>
+                    <a href="https:www.instagram.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="25" height="25"></a>
+                    <a href=" https://twitter.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="25" height="25"></a>
+                    <a href="https://www.facebook.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" width="25" height="25"></a>          
+                    <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Facebook" width="25" height="25"></a>
+        </div>
+        <div class="boxGrid">
+        </div>
+        <div class="boxGrid">
+            <summary>
+                <ul><strong><span>&#x25BE</span>Referencias y atribuciones</strong></summary>        
+                <li><small><a href="https://www.flaticon.com/free-icons/whatsapp" title="whatsapp icons">Whatsapp icons created by Fathema Khanom - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Pixel perfect - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/to" title="to icons">To icons created by iconsmind - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/casa" title="casa icons">Casa icons created by hqrloveq - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/youtube_1384060">Icona de YouTube creada per Freepik - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/instagram_2111463">Icona d'Instagram creada per Pixel perfect - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/twitter_733579">Icona de Twitter creada per Pixel perfect - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/facebook_5968764">Icona de Facebook creada per Freepik - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icon/linkedin_174857">Icona de LinkedIn creada per Freepik - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by Freepik - Flaticon</a></small></li>
+                <li><small><a href="https://www.flaticon.com/free-icons/conversation" title="conversation icons">Conversation icons created by Roundicons Premium - Flaticon</a></small>
+                <li><small><a href="https://www.flaticon.com/free-icons/agreeement" title="agreeement icons">Agreeement icons created by syafii5758 - Flaticon</a></small>
+            </ul>
+            </summary>
+        </div>
+        <div class="boxGrid">
+            <picture class="casa">
+                <a href="#inicio"> <img src="./assets/apartment.png" alt="Whatsapp" width="25em" height="25em"></a> 
+            </picture>
+        <!--<div class="boxGrid"></div>
+        <div class="boxGrid">
+        </div>
+        <div class="boxGrid"></div>-->
+    </footer>
+</body>
+</html>

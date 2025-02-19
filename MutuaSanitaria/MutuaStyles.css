@@ -1,0 +1,235 @@
+body, ul, li {
+    margin:5;
+    padding:0;
+    font-weight: 100em;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+    }
+header nav li a {
+    font-size: 1.0em;
+    /*retirada linea inferior de enlace*/
+    text-decoration: none;
+    color: #ffffff;
+    /*efecto rollover al dejar de pasar por encima*/
+    transition: all 0.5s;
+    }
+header nav li a:hover {
+    color:aquamarine;
+    font-size: 1.1em;
+    /*efecto rollover al pasar por encima*/
+    transition: all 0.5s;
+    }
+
+header nav ul li{
+    display: inline-block;
+    justify-content: space-around;
+    flex-wrap: wrap;     
+    }
+header nav ul > li ul{
+    display: none;
+    flex-direction: column;
+    }
+header nav ul > li:hover ul {
+    display: flex;
+    position:absolute;
+    background-color: burlywood;
+    font-size: 0.8em;
+    margin: 0.8em;
+    height: 3em;
+    justify-content:space-around;
+    }
+.submenus  h3{
+    padding: 1em;
+    font-size: 1.1em;
+    margin: 0.5em;
+    }
+.checklist { 
+    background-color: burlywood;
+    text-decoration: none;
+    color: #ffffff;
+    height: 2em;
+    margin: 0.5em;    
+    border-radius: 10px;   
+    }
+.submenus ul>li { /*Las medidas de border, padding y font-size las uso relativas en lugar de usar pixels, 
+                asi todo cambiara si cambia pantalla*/
+    border: 1px solid burlywood;
+    padding:0.2em 0.5em;
+    margin: 0.4em 0.8em;
+    display: inline-block;
+    font-size: 0.90em;
+    margin-bottom: 3em; 
+    }
+.submenus ul>li:hover {
+    background-color: burlywood;
+    }
+.pruebas{
+    margin: 1em;
+    }
+nav {
+    margin-bottom: 2em; 
+    margin-top: 3em;   
+    }
+nav ul {
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 3em;
+    padding-right: 1em;
+    padding-left: 1em;
+    }
+.logo {
+     border: 1px solid #666;
+     border-radius: 25%;
+     justify-content: center;
+     align-self: center;   
+    }
+.flex-header {
+    display: flex;    
+    background-color: #f4f4f4;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+/*.flex-header .mensaje{
+    }*/
+main {
+    background-color:#f4f4f4;
+    min-height: 50%;
+    }
+.containerGaleria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    margin-bottom: 2em;
+    }
+ .containerFlex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width:100%;
+    }
+.containerFlex .box {
+    display:flex;
+    flex: 1;
+    flex-wrap: wrap;
+    background-color: burlywood;
+    border-radius: 10px;
+    margin:0.5em;
+    padding: 0.8em;
+    margin-bottom: 2em;
+    }
+#quien{
+    justify-content: center;
+    }
+#instalaciones{
+    justify-content: center;
+    }
+#localizacion{ 
+    display: inline-block;
+    }
+#localizacion img{ 
+    margin-left: 10em;
+    }
+#localizacion p{ 
+    margin-left: 2em;
+    }
+#certificaciones{
+    align-items: center;
+    justify-content: center;
+    }
+.casa{
+    margin-left: 97%; 
+    }
+footer{
+    background-color: burlywood;
+    }
+ small{
+    font-size: 0.70em;
+    }
+.boxGrid li {
+    display: none;
+    flex-direction: column;
+    }
+.boxGrid:hover  li{
+    display: block;
+    }
+summary ul{
+    display: block;
+    cursor: pointer;
+    }
+.containerGrid{
+    max-width: 100%;
+    margin: 0.6em;
+    padding: 0.8em;
+    border-radius: 10px;
+    display: grid;
+    /*grid-template-columns: 15em 32em 25em;*/
+    grid-template-columns: 1fr 2fr 2fr;
+    column-gap: 3em;
+    row-gap: 1.5em;
+    align-items: center;
+    }
+.boxGrid{
+    /*background-color: steelblue;*/
+    color:black;
+    font-size: 1em;
+    padding: 2em;
+    /*border:skyblue 0.2em solid;*/
+    justify-items: center;   
+    }
+
+form{
+    background-color: burlywood;
+    border-radius: 10px; 
+    max-width: 100%;
+    margin: 0.6em;
+    margin-bottom: 2em;    
+    padding: 0.8em;
+    }
+fieldset {
+    margin-bottom: 0.6em;
+    }
+.enviar{
+    width: 5em;
+    height: 3em;
+    border-radius: 10px; 
+    margin: 0.6em;
+    }
+.enviar2{
+    width: 5em;
+    height: 3em;
+    border-radius: 10px; 
+    margin: 0.6em;
+    background-color: burlywood;
+
+}
+.politica{
+    font-size: 0.8em;
+    }
+/*fieldset p{
+    }*/
+
+@media(max-width: 1024px){
+        nav ul {
+            flex-direction: column;
+        }
+        .empresa .container {
+            display: block;
+            /*Lo mismo seria: flex-direction:column*/
+        }
+        .containerFlex{
+            flex-direction: column;
+        }
+    }
+@media(max-width: 600px){
+        .containerGrid{
+            grid-template-columns: 1fr;
+        }
+}
+
