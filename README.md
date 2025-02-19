@@ -1,2 +1,2 @@
 # Test-repository
-Includes personal programming test just for practice
+Includes personal programming projects just for practice
